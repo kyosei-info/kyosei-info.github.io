@@ -1,0 +1,37 @@
+/* 詳細ページ（2026-10-13）: phone first, no web fonts, no scripts. Accent colour as on paper. */
+:root { --accent: #1F6F78; --text: #1a1a1a; --muted: #555; --line: #ccc; --bg: #fff; --band: #eef5f6; }
+@media (prefers-color-scheme: dark) {
+  :root { --accent: #7cc4cc; --text: #e8e8e8; --muted: #aaa; --line: #444; --bg: #121212; --band: #1d2a2c; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: "BIZ UDPGothic", "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+  font-size: 1rem; line-height: 1.7; overflow-wrap: anywhere;
+}
+header.site, main, footer.site { max-width: 40em; margin: 0 auto; padding: 0 16px; }
+header.site { padding-top: 12px; border-bottom: 2px solid var(--accent); }
+.site-name { margin: 0; font-weight: bold; color: var(--accent); }
+.site-version { margin: 0 0 8px; font-size: 0.85rem; color: var(--muted); }
+h1 { font-size: 1.4rem; line-height: 1.4; margin: 20px 0 12px; }
+h3 { font-size: 1.15rem; margin: 28px 0 8px; padding: 4px 8px; background: var(--accent); color: var(--bg); }
+h4 { font-size: 1.05rem; margin: 22px 0 6px; padding-left: 8px; border-left: 4px solid var(--accent); }
+p, ul { margin: 0 0 12px; }
+a { color: var(--accent); }
+table { border-collapse: collapse; width: 100%; margin: 0 0 12px; font-size: 0.95rem; }
+th, td { border: 1px solid var(--line); padding: 6px 8px; vertical-align: top; text-align: left; }
+thead th { background: var(--accent); color: var(--bg); }
+table.kv th { width: 7.5em; background: var(--band); font-weight: bold; }
+@media (max-width: 30em) {
+  table.kv, table.kv tbody, table.kv tr, table.kv th, table.kv td { display: block; width: 100%; }
+  table.kv th { border-bottom: none; }
+  table.kv tr + tr th { border-top: none; }
+}
+.freq-sym { display: inline-block; min-width: 1.6em; font-weight: bold; }
+.legend { padding: 8px; background: var(--band); font-size: 0.95rem; }
+p:has(> img.photo) { display: flex; flex-wrap: wrap; gap: 8px; }
+img.photo { display: block; flex: 1 1 14rem; max-width: 100%; height: auto; border: 1px solid var(--line); }
+.photo-missing { display: inline-block; padding: 4px 8px; border: 1px dashed var(--line); color: var(--muted); font-size: 0.9rem; }
+footer.site { margin-top: 32px; padding-top: 12px; padding-bottom: 24px; border-top: 1px solid var(--line); font-size: 0.9rem; color: var(--muted); }
+footer.site p { margin: 4px 0; }
