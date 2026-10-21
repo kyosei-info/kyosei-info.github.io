@@ -35,3 +35,15 @@ img.photo { display: block; flex: 1 1 14rem; max-width: 100%; height: auto; bord
 .photo-missing { display: inline-block; padding: 4px 8px; border: 1px dashed var(--line); color: var(--muted); font-size: 0.9rem; }
 footer.site { margin-top: 32px; padding-top: 12px; padding-bottom: 24px; border-top: 1px solid var(--line); font-size: 0.9rem; color: var(--muted); }
 footer.site p { margin: 4px 0; }
+/* 目次と折りたたみ（本人 2026-10-21）: sections start closed; no JavaScript */
+.toc { margin: 16px 0 20px; padding: 8px 12px; background: var(--band); }
+.toc-title { margin: 0 0 4px; font-weight: bold; }
+.toc ol { margin: 0; padding-left: 1.6em; }
+.toc a { display: inline-block; padding: 4px 0; }
+details.section { margin: 10px 0; }
+details.section > summary { list-style: none; cursor: pointer; }
+details.section > summary::-webkit-details-marker { display: none; }
+details.section > summary h3 { margin: 0; display: flex; justify-content: space-between; gap: 8px; }
+details.section > summary h3::after { content: "＋"; flex: none; }
+details.section[open] > summary h3::after { content: "－"; }
+.section-body { padding-top: 4px; scroll-margin-top: 4em; }
